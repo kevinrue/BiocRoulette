@@ -6,5 +6,9 @@ navbar:
       href: index.html
     - text: "Software"
       href: software.html
+    - text: "ExperimentData"
+      href: experiment.html
+    - text: "AnnotationData"
+      href: annotation.html
     - text: "About"
       href: about.html
