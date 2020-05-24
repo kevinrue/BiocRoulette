@@ -13,3 +13,5 @@ Use the navigation bar at the top to discover the package of the day in the foll
 - [ExperimentData](experiment.html)
 
 - [AnnotationData](annotation.html)
+
+Refer to the [About](about.html) page for more information about this website.
