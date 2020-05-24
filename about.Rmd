@@ -4,4 +4,18 @@ title: "About BiocRoulette"
 
 The source code for this website is available [here](https://github.com/kevinrue/BiocRoulette).
 
-Return to <https://kevinrue.github.io/>
+## Acknowledgements
+
+Notably, this website uses `r BiocStyle::Biocpkg("BiocPkgTools")` to fetch the latest information about existing packages and download statistics.
+
+## Miscellaneous
+
+- The random seed is set to the integer representation of the day.
+
+- Packages are weighted by `log(Nb_of_distinct_IPs + 1)` during the sampling.
+
+<br/>
+<br/>
+
+Return to the main website: <https://kevinrue.github.io/>.
+

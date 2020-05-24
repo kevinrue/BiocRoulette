@@ -5,3 +5,13 @@ title: "BiocRoulette"
 Hello!
 
 This website is updated daily to feature randomly selected [Bioconductor](https://www.bioconductor.org/) packages.
+
+Use the navigation bar at the top to discover the package of the day in the following categories:
+
+- [Software](software.html)
+
+- [ExperimentData](experiment.html)
+
+- [AnnotationData](annotation.html)
+
+Refer to the [About](about.html) page for more information about this website.

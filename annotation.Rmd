@@ -1,5 +1,5 @@
 ---
-title: "Software"
+title: "AnnotationData"
 ---
 
 ```{r setup, include=FALSE}
@@ -16,7 +16,7 @@ download_stats <- biocDownloadStats()
 
 ```{r}
 # Focus on given repo
-repo_stats <- download_stats %>% filter(repo == "Software")
+repo_stats <- download_stats %>% filter(repo == "AnnotationData")
 # Focus on last complete month of download stats
 latest_full_date <- repo_stats %>% 
   group_by(Date) %>% 
