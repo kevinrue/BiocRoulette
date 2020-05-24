@@ -1,5 +1,5 @@
 <!-- badges: start -->
-[![R build status](https://github.com/kevinrue/BiocRoulette/workflows/R-CMD-check/badge.svg)](https://github.com/kevinrue/BiocRoulette/actions)
+[![render](https://github.com/kevinrue/BiocRoulette/workflows/render/badge.svg)](https://github.com/kevinrue/BiocRoulette/actions)
 <!-- badges: end -->
 
 # BiocRoulette
