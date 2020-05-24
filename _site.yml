@@ -1,0 +1,10 @@
+name: "bioc-roulette"
+navbar:
+  title: "BiocRoulette"
+  left:
+    - text: "Home"
+      href: index.html
+    - text: "Software"
+      href: software.html
+    - text: "About"
+      href: about.html

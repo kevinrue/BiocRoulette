@@ -1,0 +1,7 @@
+---
+title: "About BiocRoulette"
+---
+
+The source code for this website is available [here](https://github.com/kevinrue/BiocRoulette).
+
+Return to <https://kevinrue.github.io/>

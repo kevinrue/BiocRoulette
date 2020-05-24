@@ -1,0 +1,54 @@
+---
+title: "Software"
+---
+
+```{r setup, include=FALSE}
+library(BiocPkgTools)
+library(tidyverse)
+library(cowplot)
+knitr::opts_chunk$set(include = FALSE, echo = FALSE)
+```
+
+```{r}
+# Fetch all download stats
+download_stats <- biocDownloadStats()
+```
+
+```{r}
+# Focus on software
+software_stats <- download_stats %>% filter(repo == "Software")
+# Focus on last complete month of download stats
+latest_full_date <- software_stats %>% 
+  group_by(Date) %>% 
+  summarise(Nb_of_downloads = sum(Nb_of_downloads)) %>% 
+  filter(Nb_of_downloads > 0) %>% 
+  arrange(desc(Date)) %>% 
+  head(2) %>% 
+  tail(1) %>% 
+  pull(Date)
+software_monthly_stats <- software_stats %>%  filter(Date == latest_full_date)
+set.seed(as.numeric(Sys.Date()))
+software_featured <- software_monthly_stats %>%
+  sample_n(size = 1, replace = FALSE, weight = log(Nb_of_distinct_IPs + 1))
+```
+
+# Software package of the day: `r BiocStyle::Biocpkg(software_featured$Package)`
+
+```{r, include=TRUE}
+software_monthly_stats %>%
+  filter(Package == software_featured$Package) %>% 
+  select(Package, Year, Month, Nb_of_distinct_IPs, Nb_of_downloads) %>% 
+  knitr::kable()
+```
+
+# Monthly download statistics
+
+Arranged by decreasing number of distinct IP addresses.
+
+```{r, include=TRUE}
+software_monthly_stats %>%
+  arrange(desc(Nb_of_distinct_IPs)) %>%
+  select(Package, Year, Month, Nb_of_distinct_IPs, Nb_of_downloads) %>% 
+  DT::datatable(filter = "top")
+  # rmarkdown::paged_table()
+```
