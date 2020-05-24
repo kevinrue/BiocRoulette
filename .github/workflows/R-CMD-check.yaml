@@ -84,8 +84,9 @@ jobs:
 
       - name: Render site
         run: |
-          install.packages('remotes', Ncpus = 2L)
+          install.packages('rmarkdown', Ncpus = 2L)
           rmarkdown::render_site(encoding = 'UTF-8')
+        shell: Rscript {0}
 
       - name: Deploy 🚀
         # github.event_name == 'schedule' && github.ref == 'refs/heads/master' && 
