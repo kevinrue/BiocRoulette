@@ -278,6 +278,12 @@ $(document).ready(function () {
   <a href="software.html">Software</a>
 </li>
 <li>
+  <a href="experiment.html">ExperimentData</a>
+</li>
+<li>
+  <a href="annotation.html">AnnotationData</a>
+</li>
+<li>
   <a href="about.html">About</a>
 </li>
       </ul>
@@ -298,7 +304,19 @@ $(document).ready(function () {
 
 
 <p>The source code for this website is available <a href="https://github.com/kevinrue/BiocRoulette">here</a>.</p>
-<p>Return to <a href="https://kevinrue.github.io/" class="uri">https://kevinrue.github.io/</a></p>
+<div id="acknowledgements" class="section level2">
+<h2>Acknowledgements</h2>
+<p>Notably, this website uses <em><a href="https://bioconductor.org/packages/3.11/BiocPkgTools">BiocPkgTools</a></em> to fetch the latest information about existing packages and download statistics.</p>
+</div>
+<div id="miscellaneous" class="section level2">
+<h2>Miscellaneous</h2>
+<ul>
+<li><p>The random seed is set to the integer representation of the day.</p></li>
+<li><p>Packages are weighted by <code>log(Nb_of_distinct_IPs + 1)</code> during the sampling.</p></li>
+</ul>
+<p><br/> <br/></p>
+<p>Return to the main website: <a href="https://kevinrue.github.io/" class="uri">https://kevinrue.github.io/</a>.</p>
+</div>
 
 
 
